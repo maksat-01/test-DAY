@@ -3,13 +3,10 @@ const number = document.querySelector('.number-input')
 const btn = document.querySelector('.add-btn')
 const ul = document.querySelector('.list')
 
-if (localStorage.getItem('taskHTML')) {
-    ul.innerHTML = localStorage.getItem('taskHTML')
-}
+
 
 btn.addEventListener('click', () => {
     addToDOo()
-    saveHTMLtoLS()
 })
 
 input.addEventListener('keydown', (e) => {
@@ -21,7 +18,6 @@ input.addEventListener('keydown', (e) => {
             input.value = ""
             break;
     }
-    saveHTMLtoLS()
 })
 
 number.addEventListener('keydown', (e) => {
@@ -33,7 +29,6 @@ number.addEventListener('keydown', (e) => {
             number.value = ""
             break;
     }
-    saveHTMLtoLS()
 })
 
 
@@ -58,7 +53,6 @@ ${number.value}
 <button class="del-btn btn btn-danger">delete</button>
 </li>`
         ul.innerHTML += newList
-        saveHTMLtoLS()
     }
     input.value = ""
     number.value = ""
@@ -72,11 +66,8 @@ ul.addEventListener('click', (e) => {
 
     if (e.target.classList.contains('check-box')) {
         e.target.parentNode.classList.toggle('line')
-        saveHTMLtoLS()
     }
 })
 
 
-function saveHTMLtoLS() {
-    localStorage.setItem('taskHTML', ul.innerHTML)
-}
+
