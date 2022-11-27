@@ -35,18 +35,14 @@ number.addEventListener('keydown', (e) => {
 function addToDOo() {
     if (input.value !== "") {
         const newList = `<li class="list-group-item d-flex  justify-content-between align-items-center">
-<span class="d-flex align-items-center">
+<span class="d-flex align-items-center ">
 <input type="checkbox" class="check-box mx-2">
-<span class="d-flex flex-column">
 ${input.value} 
-</span>
 
 </span>
 <span class="d-flex align-items-center">
 <input type="checkbox" class="check-box mx-2">
-<span class="d-flex flex-column">
 ${number.value} 
-</span>
 
 </span>
 
